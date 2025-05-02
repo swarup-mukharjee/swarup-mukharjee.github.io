@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "SwarupMukharjee",
   description: "A stunning 3D parallax portfolio website with vibrant colors and animations",
+  icons: {
+    icon: "image/logo.png", 
+  },
 }
 
 export default function RootLayout({
