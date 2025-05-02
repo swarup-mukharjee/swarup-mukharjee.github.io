@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -51,6 +52,7 @@ export default function Navbar() {
           className="text-white font-bold text-xl md:text-2xl"
           onClick={() => scrollToSection("#home")}
         >
+          <Image src="image/logo.png" width={30} height={30} alt="logo"/>
           <motion.span
             className="text-orange-500"
             animate={{
