@@ -87,7 +87,7 @@ export default function Contact() {
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
                       <a href="mailto:hello@example.com" className="text-white hover:text-primary transition-colors">
-                        hello@example.com
+                        swarupmukharjee@outlook.com
                       </a>
                     </div>
                   </div>
@@ -96,15 +96,15 @@ export default function Contact() {
                     <div>
                       <p className="text-gray-400 text-sm">Phone</p>
                       <a href="tel:+1234567890" className="text-white hover:text-primary transition-colors">
-                        +1 (234) 567-890
+                        +91 7735227822
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <MapPin className="text-primary mt-1 mr-4" size={20} />
                     <div>
-                      <p className="text-gray-400 text-sm">Location</p>
-                      <p className="text-white">San Francisco, CA</p>
+                      <p className="text-gray-400 text-sm">Current Location</p>
+                      <p className="text-white">Lucknow,UP</p>
                     </div>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function Contact() {
                 <p className="text-gray-300 mb-6">Follow me on social media or check out my work on these platforms.</p>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://github.com/swarup-mukharjee"
                     className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-primary transition-colors"
                     aria-label="GitHub"
                   >
@@ -130,7 +130,7 @@ export default function Contact() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/swarup-mukharjee/"
                     className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-primary transition-colors"
                     aria-label="LinkedIn"
                   >
@@ -145,7 +145,7 @@ export default function Contact() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://x.com/SwarupMukharjee"
                     className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-primary transition-colors"
                     aria-label="Twitter"
                   >
@@ -160,7 +160,7 @@ export default function Contact() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/swarup_mukharjee/"
                     className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-primary transition-colors"
                     aria-label="Instagram"
                   >
