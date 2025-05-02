@@ -176,7 +176,7 @@ export default function Contact() {
                   </a>
                   <a
   href="https://www.facebook.com/chiranjibi.das.5667"
-  className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-blue-600 transition-colors"
+  className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-primary transition-colors"
   aria-label="Facebook"
 >
   <svg
