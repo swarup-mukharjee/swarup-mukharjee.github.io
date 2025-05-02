@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link
           href="#home"
-          className="text-white font-bold text-xl md:text-2xl"
+          className="text-white font-bold text-xl md:text-2xl flex justify-center"
           onClick={() => scrollToSection("#home")}
         >
           <Image src="image/logo.png" width={30} height={30} alt="logo"/>
