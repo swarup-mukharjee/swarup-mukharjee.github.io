@@ -8,9 +8,8 @@ import AbstractShapes from "@/components/abstract-shapes"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "3D Parallax Portfolio",
+  title: "SwarupMukharjee",
   description: "A stunning 3D parallax portfolio website with vibrant colors and animations",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
