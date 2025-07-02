@@ -114,7 +114,7 @@ export default function About() {
               >
                 <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-2xl">
                   <Image
-                    src="image/my.jpg?height=600&width=600"
+                    src="image/my1.png?height=600&width=600"
                     alt="Developer Portrait"
                     width={600}
                     height={600}
