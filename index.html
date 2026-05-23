@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swarup Mukharjee — Senior Frontend Developer</title>
+<title>Swarup Mukharjee — Senior Developer</title>
+<link rel="icon" type="image/png" sizes="180x180" href="images/swarup.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -191,6 +193,30 @@
     .exp-title { font-size: 1.3rem; }
     .project-card { padding: 1.8rem 1.5rem; }
   }
+
+
+#cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#cursorRing {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ff5a1f;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
+
 </style>
 </head>
 <body>
@@ -484,22 +510,69 @@
   });
 
   // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+  // const cursor = document.getElementById('cursor');
+  // const ring = document.getElementById('cursorRing');
+  // let mx = 0, my = 0, rx = 0, ry = 0;
+  // document.addEventListener('mousemove', e => {
+  //   mx = e.clientX; my = e.clientY;
+  //   cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+  // });
+  // (function animRing() {
+  //   rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+  //   ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+  //   requestAnimationFrame(animRing);
+  // })();
+  // document.querySelectorAll('a,button,.skill-card,.project-card,.cert-badge').forEach(el => {
+  //   el.addEventListener('mouseenter', () => { cursor.style.width = '20px'; cursor.style.height = '20px'; ring.style.width = '60px'; ring.style.height = '60px'; });
+  //   el.addEventListener('mouseleave', () => { cursor.style.width = '12px'; cursor.style.height = '12px'; ring.style.width = '40px'; ring.style.height = '40px'; });
+  // });
+
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+
+cursor.style.backgroundImage = "url('images/swarup.png')";
+cursor.style.backgroundSize = "cover";
+cursor.style.backgroundPosition = "center";
+cursor.style.backgroundRepeat = "no-repeat";
+cursor.style.borderRadius = "50%";
+
+let mx = 0, my = 0, rx = 0, ry = 0;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX;
+  my = e.clientY;
+
+  cursor.style.left = mx + 'px';
+  cursor.style.top = my + 'px';
+});
+
+(function animRing() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+
+  ring.style.left = rx + 'px';
+  ring.style.top = ry + 'px';
+
+  requestAnimationFrame(animRing);
+})();
+
+document.querySelectorAll('a,button,.skill-card,.project-card,.cert-badge').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.width = '40px';
+    cursor.style.height = '40px';
+
+    ring.style.width = '70px';
+    ring.style.height = '70px';
   });
-  (function animRing() {
-    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-    requestAnimationFrame(animRing);
-  })();
-  document.querySelectorAll('a,button,.skill-card,.project-card,.cert-badge').forEach(el => {
-    el.addEventListener('mouseenter', () => { cursor.style.width = '20px'; cursor.style.height = '20px'; ring.style.width = '60px'; ring.style.height = '60px'; });
-    el.addEventListener('mouseleave', () => { cursor.style.width = '12px'; cursor.style.height = '12px'; ring.style.width = '40px'; ring.style.height = '40px'; });
+
+  el.addEventListener('mouseleave', () => {
+    cursor.style.width = '24px';
+    cursor.style.height = '24px';
+
+    ring.style.width = '40px';
+    ring.style.height = '40px';
   });
+});
 
   // Parallax hero bg
   window.addEventListener('scroll', () => {
